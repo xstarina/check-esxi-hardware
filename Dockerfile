@@ -32,7 +32,7 @@ ENV PATH="/app/venv/bin:$PATH"
 USER dude
 
 LABEL org.opencontainers.image.title=check-esxi-hardware \
-      org.opencontainers.image.description="Bash, Certbot, Curl, Jq, OpenSSH client" \
+      org.opencontainers.image.description="Script to monitor the hardware of ESXi" \
       org.opencontainers.image.vendor=starina
 
 ENTRYPOINT [ "python", "check_esxi_hardware.py" ]
