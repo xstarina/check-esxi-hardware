@@ -15,6 +15,13 @@ docker run --rm \
   -H esxi1.domain.local -U file:.esxipass -P file:.esxipass
 ```
 
+### Note
+By default, the container runs as user `dude` (`uid:gid` `7777:7777`). So, if you mount a password file, you must give read permissions to this user/group. For example:
+```
+sudo chown 7777:7777 .esxipass
+sudo chmod 400 .esxipass 
+```
+
 ## Definition of the parameters
 <https://www.claudiokuenzler.com/monitoring-plugins/check_esxi_hardware.php#Parameters>
 ```
