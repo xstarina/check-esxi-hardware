@@ -1,7 +1,7 @@
 FROM alpine:latest AS base
 
 RUN set -ex; \
-    apk add --update --no-cache python3; \
+    apk add --update --no-cache python3 tzdata; \
     addgroup -g 7777 -S dude; \
     adduser -u 7777 -h / -SD -G dude dude;
 
